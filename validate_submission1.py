@@ -12,9 +12,9 @@ def get_submitters(temp_folder):
     if not glob_result:
         raise Exception('Unable to find submitters.txt - Invalid format')
 
-    if not os.path.exists(os.path.join(temp_folder, 'pacman.h')):
+    if not os.path.join(temp_folder, 'pacman.h'):
 	raise Exception('No pacman.h file - Invalid format')
-    if not os.path.exists(os.path.join(temp_folder, 'pacman.c')):
+    if not os.path.join(temp_folder, 'pacman.c'):
 	raise Exception('No pacman.c file - Invalid format')
     
     sub_text = glob_result
